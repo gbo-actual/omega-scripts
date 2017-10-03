@@ -1,0 +1,12 @@
+#!/bin/bash
+
+omegaName=$1
+dirName=${PWD##*/}
+
+if [[ $omegaName -eq "" ]]; then
+    echo "No Omega name specified."
+    exit
+fi
+
+cd ..
+rsync -av -P $dirName root@omega-$omegaName.local:/root

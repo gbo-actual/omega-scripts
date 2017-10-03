@@ -1,0 +1,9 @@
+#!/bin/bash
+
+omegaName=$1
+if [[ $omegaName -eq "" ]]; then
+    echo "No Omega name specified."
+    exit
+fi
+
+ssh root@omega-$omegaName.local

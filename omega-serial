@@ -1,0 +1,9 @@
+#!/bin/bash
+
+serialPort=$1
+
+if [[ $serialPort=="" ]]; then
+    serialPort="0"
+fi
+
+screen /dev/ttyUSB$serialPort 115200
