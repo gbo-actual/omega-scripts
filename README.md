@@ -21,6 +21,8 @@ Then run them from the repo or add the repo to your PATH: https://askubuntu.com/
 
 ### omega-serial
 
+Used to connect to Omegas over serial (Expansion Dock, Mini Dock only).
+
 Enter the device number of the Omega to which you wish to connect. The numbers start at 0 and (typically) go up in the order you plugged them in.
 
 If no argument specified, will try to connect to the first (or only) USB serial device available (`/dev/ttyUSB0`).
@@ -31,6 +33,8 @@ omega-serial 2          # /dev/ttyUSB2
 ```
 
 ### omega-ssh
+
+Used to connect to Omegas over SSH (required for Power Dock, Arduino Dock, Breadboard Dock).
 
 For use with Omegas whose hostnames follow the default pattern below:
 
