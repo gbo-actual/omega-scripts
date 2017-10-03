@@ -1,5 +1,5 @@
 # omega-scripts
-Quick utility scripts for working with the Onion Omega.
+Quick utility scripts for working with the [Onion Omega](https://onion.io).
 
 ## Compatibility
 
