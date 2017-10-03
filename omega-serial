@@ -2,7 +2,7 @@
 
 serialPort=$1
 
-if [[ $serialPort=="" ]]; then
+if [[ $serialPort -eq "" ]]; then
     serialPort="0"
 fi
 
