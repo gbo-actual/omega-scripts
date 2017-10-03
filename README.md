@@ -23,14 +23,12 @@ Then run them from the repo or add the repo to your PATH: https://askubuntu.com/
 
 Enter the device number of the Omega to which you wish to connect. The numbers start at 0 and (typically) go up in the order you plugged them in.
 
-Eg.
+If no argument specified, will try to connect to the first (or only) USB serial device available (`/dev/ttyUSB0`).
 
 ``` bash
 omega-serial            # /dev/ttyUSB0
 omega-serial 2          # /dev/ttyUSB2
 ```
-
-If no argument specified, will try to connect to the first (or only) USB serial device available (`/dev/ttyUSB0`).
 
 ### omega-ssh
 
@@ -40,13 +38,13 @@ For use with Omegas whose hostnames follow the default pattern below:
 
 Where `ABCD` are the last 4 digits of the Omega's MAC address. On Omega2s, these will be printed in **bold** on a sticker on both the box and the unit itself.
 
-Eg.
+If no argument specified, will print an error message and exit.
 
 ``` bash
 omega-ssh 2821          # omega-2821.local
 ```
 
-If no argument specified, will print an error message and exit.
+
 
 ### omega-upload
 
