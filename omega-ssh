@@ -1,9 +1,21 @@
 #!/bin/bash
 
-omegaName=$1
-if [[ $omegaName -eq "" ]]; then
-    echo "No Omega name specified."
-    exit
-fi
+osName=($(uname -s))
 
+omegaName=$1
+
+case $osName in
+    Linux*)
+        if [[ "$omegaName" -eq "" ]]; then
+            echo "No Omega name specified."
+            exit
+        fi
+        ;;
+    Darwin*)
+        if [ -z "$omegaName" ]; then
+            echo "No Omega name specified."
+            exit
+        fi
+        ;;
+esac
 ssh root@omega-$omegaName.local
