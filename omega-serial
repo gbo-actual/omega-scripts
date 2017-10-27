@@ -1,9 +1,23 @@
 #!/bin/bash
 
-serialPort=$1
+os=($(uname -s))
+baudrate=115200
 
-if [[ $serialPort -eq "" ]]; then
-    serialPort="0"
-fi
+case "$os" in
+    Linux*)
+        serialPort=$1
+        if [[ $serialPort -eq "" ]]; then
+            serialPort="0"
+        fi
 
-screen /dev/ttyUSB$serialPort 115200
+        screen /dev/ttyUSB$serialPort $baudrate
+        ;;
+    Darwin*)
+        screen /dev/tty.SLAB_USBtoUART $baudrate
+        ;;
+esac
+
+
+
+
+i
